@@ -17,28 +17,13 @@ document.addEventListener("click", (e) => {
 
         var test = document.getElementById("text").value;
 
-        var cookieVal = { test : '' };
-        cookieVal.test = test;
-
-        browser.cookies.set({
-            url: "https://www.google.co.jp/?gfe_rd=cr&ei=4gJcWZ-uHOqQ8QfSmIGQDA&gws_rd=ssl",
-            name: "tabColor",
-            value: "red"
-        })
-
-        // クッキー接続はできたが、取得はできなかった。
-        // urlごとにクッキーを紐付ける必要があるっぽい
-        var data = browser.cookies.get({
-            url : "https://www.google.co.jp/?gfe_rd=cr&ei=4gJcWZ-uHOqQ8QfSmIGQDA&gws_rd=ssl",
-            name: "tabColor"
+        browser.storage.local.set({'value': "test"}, function() {
+            console.log("成功");
         });
 
-        alert(data.value);
-
-        //alert(data.value);
-
-        //var chosenBeast = e.target.textContent;
-        //var chosenBeastURL = beastNameToURL(chosenBeast);
+        browser.storage.local.get('value', function(items) {
+            console.log(items.value);
+        });
 
         browser.tabs.executeScript(null, {
             file: "/content_scripts/beastify.js"
@@ -46,7 +31,6 @@ document.addEventListener("click", (e) => {
 
         var gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
         gettingActiveTab.then((tabs) => {
-            alert(tabs[0]);
             browser.tabs.sendMessage(tabs[0].id, {beastURL: test});
         });
     } else if (e.target.classList.contains("clear")) {
