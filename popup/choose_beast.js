@@ -35,6 +35,11 @@ document.addEventListener("click", (e) => {
         });
 
         var gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
+
+        gettingActiveTab.then((tabs) => {
+            console.log(tabs[0].url);
+        });
+
         gettingActiveTab.then((tabs) => {
             browser.tabs.sendMessage(tabs[0].id, {beastURL: test});
         });
