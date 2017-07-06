@@ -15,10 +15,15 @@ function beastNameToURL(beastName) {
 document.addEventListener("click", (e) => {
     if (e.target.classList.contains("save")) {
 
-        var test = document.getElementById("text").value;
+        var keywords = document.getElementsByClassName("text");
 
-        browser.storage.local.set({'value': "test"}, function() {
-            console.log("成功");
+        var array_keywords = [];
+        for (var i = 0; i < keywords.length; i++) {
+            array_keywords.push(keywords[i].value);
+        }
+
+        browser.storage.local.set({'value': array_keywords}, function() {
+            console.log("保存成功");
         });
 
         browser.storage.local.get('value', function(items) {
