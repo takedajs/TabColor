@@ -41,7 +41,7 @@ document.addEventListener("click", (e) => {
                 }
             }
 
-            browser.tabs.sendMessage(tabs[0].id, {test: "aaa"});
+            browser.tabs.sendMessage(tabs[0].id, {test: "aa"});
         });
     } else if (e.target.classList.contains("clear")) {
         browser.tabs.reload();
