@@ -1,5 +1,9 @@
 function beastify(request, sender, sendResponse) {
-    console.log("aaaa")
+    alert("aaa");
+    console.log(request.isMatch);
+    if (request.isMatch) {
+        console.log("成功");
+    }
     browser.runtime.onMessage.removeListener(beastify);
 }
 
