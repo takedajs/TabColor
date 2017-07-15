@@ -9,7 +9,11 @@
     "48": "icons/beasts-48.png"
   },
 
-  "permissions": ["storage","tabs"],
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+
 
   "browser_action": {
     "default_icon": "icons/beasts-32.png",
