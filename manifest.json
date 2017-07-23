@@ -1,30 +1,27 @@
 {
-
-  "description": "Adds a browser action icon to the toolbar. Click the button to choose a beast. The active tab's body content is then replaced with a picture of the chosen beast. See https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Examples#beastify",
+  "description": "If the specified keyword exists in the URL, it is an add-on that stands out in red.You can set multiple keywords.",
   "manifest_version": 2,
-  "name": "Beastify",
+  "name": "TabColor",
   "version": "1.0",
-  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify",
+  "homepage_url": "https://github.com/takedajs/TabColorWebextensions",
   "icons": {
-    "48": "icons/beasts-48.png"
+    "48": "icons/tab_color_side_60.png"
   },
 
   "permissions": [
-    "storage",
-    "tabs"
+    "storage"
   ],
 
-
   "browser_action": {
-    "default_icon": "icons/beasts-32.png",
-    "default_title": "Beastify",
-    "default_popup": "popup/choose_beast.html"
+    "default_icon": "icons/tab_color_side_30.png",
+    "default_title": "TabColor",
+    "default_popup": "popup/keyword_save.html"
   },
-  
-  "web_accessible_resources": [
-    "beasts/frog.jpg",
-    "beasts/turtle.jpg",
-    "beasts/snake.jpg"
-  ]
 
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_scripts/tab_color.js"]
+    }
+  ]
 }
