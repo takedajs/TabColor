@@ -6,7 +6,6 @@ function url_match() {
     var storage_keywords = [];
     browser.storage.local.get('value', function(items) {
         storage_keywords = items.value;
-        console.log(storage_keywords);
     });
 
     // コールバック関数より後に実行させる
@@ -27,7 +26,6 @@ function url_match() {
                 document.body.style.borderLeft = "solid 15px red";
             }
         },
-        100
+        300
     );
 }
-
