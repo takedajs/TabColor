@@ -1,6 +1,7 @@
+// タブを赤く見せるテーマ
 const themes = {
     images: {
-        headerURL: '../red.jpg',
+        headerURL: '../tab_red.jpg',
     },
     colors: {
         accentcolor: '#CACACA',
@@ -33,7 +34,6 @@ browser.tabs.onActivated.addListener((activeInfo) => {
 });
 
 function url_match(tab) {
-
     var storage_keywords = [];
     browser.storage.local.get('value', function(items) {
         storage_keywords = items.value;
@@ -54,7 +54,6 @@ function url_match(tab) {
                 }
             }
             if (isMatch) {
-                document.body.style.borderLeft = "solid 15px red";
                 browser.theme.update(themes);
             } else {
                 //browser.theme.reset() が利用できなかったので、赤を打ち消すテーマをセットする

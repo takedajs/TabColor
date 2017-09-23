@@ -12,6 +12,7 @@ function create_input(){
     // コールバック関数より後に実行させる
     window.setTimeout(
         function(){
+            // キーワード登録フォーム作成
             for (var i=0; i < 10; i++) {
                 var input = document.createElement("input");
                 input.setAttribute("type","text");
@@ -43,6 +44,6 @@ document.addEventListener("click", function(e) {
         browser.storage.local.set({'value': array_keywords}, function() {});
 
         browser.tabs.reload();
-        alert("登録が完了しました。");
+        alert("Completion of registration");
     }
 });

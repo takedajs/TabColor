@@ -5,7 +5,7 @@
   "version": "1.0",
   "homepage_url": "https://github.com/takedajs/TabColorWebextensions",
   "icons": {
-    "48": "icons/tab_color_side_60.png"
+    "48": "icons/tab_color_60.png"
   },
 
   "permissions": [
@@ -16,7 +16,7 @@
   ],
 
   "browser_action": {
-    "default_icon": "icons/tab_color_side_30.png",
+    "default_icon": "icons/tab_color_30.png",
     "default_title": "TabColor",
     "default_popup": "popup/keyword_save.html"
   },
