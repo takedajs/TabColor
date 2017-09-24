@@ -2,7 +2,7 @@
   "description": "If the specified keyword exists in the URL, it is an add-on that stands out in red.You can set multiple keywords.",
   "manifest_version": 2,
   "name": "TabColor",
-  "version": "1.0",
+  "version": "2.0",
   "homepage_url": "https://github.com/takedajs/TabColorWebextensions",
   "icons": {
     "48": "icons/tab_color_60.png"
