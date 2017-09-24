@@ -18,7 +18,7 @@ function create_input(){
                 input.setAttribute("type","text");
                 input.setAttribute("class","text");
                 // 登録されている要素がある場合
-                if (storage_keywords.length > 0) {
+                if (storage_keywords != undefined) {
                     input.setAttribute("value", storage_keywords[i]);
                 }
                 document.getElementById("keywords").appendChild(input);
