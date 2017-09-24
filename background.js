@@ -4,17 +4,19 @@ const themes = {
         headerURL: '../tab_red.jpg',
     },
     colors: {
-        accentcolor: '#CACACA',
+        accentcolor: '#D5D5D5',
         textcolor: 'black',
     }
 };
+
+
 
 const reset_themes = {
     images: {
         headerURL: '',
     },
     colors: {
-        accentcolor: '#CACACA',
+        accentcolor: '',
         textcolor: 'black',
     }
 };
@@ -56,7 +58,7 @@ function url_match(tab) {
             if (isMatch) {
                 browser.theme.update(themes);
             } else {
-                //browser.theme.reset() が利用できなかったので、赤を打ち消すテーマをセットする
+                //browser.theme.reset();はfirefox56から利用可能。
                 browser.theme.update(reset_themes);
             }
         },
