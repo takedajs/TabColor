@@ -4,19 +4,7 @@ const themes = {
         theme_frame: '../tab_red.jpg',
     },
     colors: {
-        accentcolor: '#D5D5D5',
-        textcolor: 'black',
-    }
-};
-
-
-
-const reset_themes = {
-    images: {
-        theme_frame: '',
-    },
-    colors: {
-        accentcolor: '',
+        accentcolor: '#F9F8F8',
         textcolor: 'black',
     }
 };
@@ -58,8 +46,7 @@ function url_match(tab) {
             if (isMatch) {
                 browser.theme.update(themes);
             } else {
-                //browser.theme.reset();はfirefox56から利用可能。
-                browser.theme.update(reset_themes);
+                browser.theme.reset();
             }
         },
         300
