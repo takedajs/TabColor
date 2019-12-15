@@ -1,7 +1,7 @@
 // タブを赤く見せるテーマ
 const themes = {
     images: {
-        headerURL: '../tab_red.jpg',
+        theme_frame: '../tab_red.jpg',
     },
     colors: {
         accentcolor: '#D5D5D5',
@@ -13,7 +13,7 @@ const themes = {
 
 const reset_themes = {
     images: {
-        headerURL: '',
+        theme_frame: '',
     },
     colors: {
         accentcolor: '',
