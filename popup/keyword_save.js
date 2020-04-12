@@ -13,7 +13,7 @@ function create_input(){
     window.setTimeout(
         function(){
             // キーワード登録フォーム作成
-            for (var i=0; i < 10; i++) {
+            for (var i=0; i < 30; i++) {
                 var input = document.createElement("input");
                 input.setAttribute("type","text");
                 input.setAttribute("class","text");
