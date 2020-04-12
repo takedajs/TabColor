@@ -24,5 +24,4 @@
   "background": {
     "scripts": ["background.js"]
   }
-
 }
