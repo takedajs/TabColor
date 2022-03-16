@@ -1,7 +1,7 @@
 # TabColor
 
 TabColor :: Add-ons for Firefox
-https://addons.mozilla.org/ja/firefox/addon/tabcolor/
+https://addons.mozilla.org/firefox/addon/tabcolor/
 
 指定したキーワードにマッチしたURLの場合、ブラウザタブ全体が赤く表示されます。  
 複数のキーワードを登録することができます。
